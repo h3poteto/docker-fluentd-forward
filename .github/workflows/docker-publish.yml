@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: fluentbit-forward
+  IMAGE_NAME: fluentd-forward
 
 jobs:
   # Run tests.
