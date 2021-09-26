@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/h3poteto/docker-fluentd-forward.svg?style=svg)](https://circleci.com/gh/h3poteto/docker-fluentd-forward)
-![Docker Automated build](https://img.shields.io/docker/automated/h3poteto/fluentd-forward)
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/h3poteto/fluentd-forward?sort=semver)
+[![Build](https://github.com/h3poteto/docker-fluentd-forward/actions/workflows/build.yml/badge.svg)](https://github.com/h3poteto/docker-fluentd-forward/actions/workflows/build.yml)
+[![Docker](https://github.com/h3poteto/docker-fluentd-forward/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/h3poteto/docker-fluentd-forward/actions/workflows/docker-publish.yml)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/h3poteto/fluentd-forward?sort=semver)](https://github.com/h3poteto/docker-fluentd-forward/releases)
 
 
 # docker-fluentd-forward
