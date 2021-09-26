@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+  # Run tests for any PRs.
+  pull_request:
+
+env:
+  APPLICATION_LOG_PATH: /app
+  TIME_KEY: time
+  TAG_PREFIX: app
+  AGGREGATOR_HOST: 127.0.0.1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          docker build -t fluentd-forward:latest .
+
+      - name: Config check
+        run: |
+          docker run --rm -v $(pwd):/fluentd/etc/ -e APPLICATION_LOG_PATH=$APPLICATION_LOG_PATH -e TIME_KEY=$TIME_EKY -e TAG_PREFIX=$TAG_PREFIX -e AGGREGATOR_HOST=$AGGREGATOR_HOST fluentd-forward:latest fluentd --dry-run -c /fluentd/etc/fluent.conf -v
